@@ -41,19 +41,19 @@ const CountdownTimer = () => {
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
     <div className="text-center">
-      <div className="glass-card rounded-xl p-6 hover-lift">
-        <div className="text-4xl md:text-5xl font-bold text-primary text-glow">
+      <div className="glass-card rounded-lg p-4 hover-lift">
+        <div className="text-2xl md:text-3xl font-bold text-primary text-glow">
           {value.toString().padStart(2, '0')}
         </div>
       </div>
-      <div className="text-muted-foreground text-base mt-4 uppercase tracking-widest font-medium">
+      <div className="text-muted-foreground text-xs mt-3 uppercase tracking-wider font-medium">
         {label}
       </div>
     </div>
   );
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-lg mx-auto">
       <TimeBlock value={timeLeft.days} label="Days" />
       <TimeBlock value={timeLeft.hours} label="Hours" />
       <TimeBlock value={timeLeft.minutes} label="Minutes" />

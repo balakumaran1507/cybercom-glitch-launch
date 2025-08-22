@@ -43,24 +43,24 @@ const EmailSubscription = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <h3 className="text-lg font-semibold text-center mb-4 text-primary">
+    <div className="max-w-sm mx-auto">
+      <h3 className="text-base font-medium text-center mb-6 text-primary">
         Stay Updated
       </h3>
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 bg-card border-border focus:ring-primary focus:border-primary"
+          className="w-full bg-card border-border focus:ring-primary focus:border-primary text-sm"
         />
         <Button 
           type="submit" 
           disabled={isSubmitting}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground cyber-glow"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground cyber-glow text-sm"
         >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+          {isSubmitting ? 'Subscribing...' : 'Notify Me'}
         </Button>
       </form>
     </div>

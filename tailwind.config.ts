@@ -62,13 +62,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				cyber: {
-					green: 'hsl(var(--cyber-green))',
-					'green-glow': 'hsl(var(--cyber-green-glow))',
-					dark: 'hsl(var(--cyber-dark))',
-					darker: 'hsl(var(--cyber-darker))',
-					gray: 'hsl(var(--cyber-gray))',
-					light: 'hsl(var(--cyber-light))'
+				glass: {
+					DEFAULT: 'hsl(var(--glass))',
+					border: 'hsl(var(--glass-border))',
+					backdrop: 'hsl(var(--glass-backdrop))'
 				}
 			},
 			borderRadius: {

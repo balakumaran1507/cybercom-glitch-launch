@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
+interface TimeUnit {
+  value: number;
+  label: string;
 }
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+  const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -21,7 +19,7 @@ const CountdownTimer = () => {
     targetDate.setDate(targetDate.getDate() + 30);
 
     const calculateTimeLeft = () => {
-      const difference = +targetDate - +new Date();
+      const difference = targetDate.getTime() - new Date().getTime();
       
       if (difference > 0) {
         setTimeLeft({
@@ -33,31 +31,48 @@ const CountdownTimer = () => {
       }
     };
 
+    // Calculate immediately
     calculateTimeLeft();
+    
+    // Then update every second
     const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
-  const TimeBlock = ({ value, label }: { value: number; label: string }) => (
-    <div className="text-center">
-      <div className="glass-card rounded-lg p-4 hover-lift">
-        <div className="text-2xl md:text-3xl font-bold text-primary text-glow">
-          {value.toString().padStart(2, '0')}
-        </div>
-      </div>
-      <div className="text-muted-foreground text-xs mt-3 uppercase tracking-wider font-medium">
-        {label}
-      </div>
-    </div>
-  );
+  // Format numbers to always have two digits
+  const formatNumber = (num: number) => {
+    return num < 10 ? `0${num}` : num.toString();
+  };
+
+  const timeUnits: TimeUnit[] = [
+    { value: timeLeft.days, label: 'Days' },
+    { value: timeLeft.hours, label: 'Hours' },
+    { value: timeLeft.minutes, label: 'Minutes' },
+    { value: timeLeft.seconds, label: 'Seconds' },
+  ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-lg mx-auto">
-      <TimeBlock value={timeLeft.days} label="Days" />
-      <TimeBlock value={timeLeft.hours} label="Hours" />
-      <TimeBlock value={timeLeft.minutes} label="Minutes" />
-      <TimeBlock value={timeLeft.seconds} label="Seconds" />
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-xl mx-auto">
+      {timeUnits.map((unit, index) => (
+        <div key={unit.label} className="flex flex-col items-center">
+          <div className="relative group w-full">
+            {/* Background glow effect */}
+            <div className="absolute inset-0 bg-blue-500/5 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            {/* Timer box */}
+            <div className="relative bg-black/30 backdrop-blur-md rounded-xl w-full py-4 px-2 border border-glass-border overflow-hidden">
+              {/* Animated corner accent */}
+              <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-blue-500/20 to-transparent rounded-bl-xl"></div>
+              
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-glow text-center">
+                {formatNumber(unit.value)}
+              </div>
+            </div>
+          </div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground mt-3 font-medium">{unit.label}</div>
+        </div>
+      ))}
     </div>
   );
 };

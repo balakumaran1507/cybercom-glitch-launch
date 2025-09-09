@@ -10,27 +10,7 @@ const Index = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/70 to-black/90 z-0"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0,transparent_70%)] z-0"></div>
       
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Modern Header */}
-        <header className="w-full py-8 px-6 md:px-12 border-b border-white/5">
-          <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold">
-                <span 
-                  className="glitch text-glow" 
-                  data-text="CYBERCOM"
-                >
-                  CYBERCOM
-                </span>
-              </h1>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all">About</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all">Features</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all">Contact</a>
-            </div>
-          </div>
-        </header>
+      <div className="relative z-10 min-h-screen flex flex-col pt-16">
 
         {/* Hero Section with Countdown */}
         <section className="flex-1 flex items-center justify-center px-6 md:px-12 py-12 md:py-20">
@@ -130,9 +110,46 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-2">Research Lab & Innovation</h3>
-                    <p className="text-muted-foreground">Advanced research in AI, Cloud, Automation, and cutting-edge tech. We're the VIP of cybersecurity - delivering enterprise solutions with AI and talented engineers</p>
+                    <p className="text-muted-foreground">Advanced research in AI, Cloud, Automation, and cutting-edge tech. We deliver enterprise solutions with AI and talented engineers - we're the game changers of cybersecurity</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Partner Companies */}
+        <section className="w-full px-6 md:px-12 py-16 bg-muted/20">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-8">Trusted by Industry Leaders</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div key={index} className="glass-morphism rounded-lg p-4 border border-border/30 hover-lift">
+                  <div className="w-full h-12 bg-muted rounded flex items-center justify-center">
+                    <span className="text-xs text-muted-foreground">Partner {index + 1}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-full px-6 md:px-12 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="glass-morphism rounded-2xl p-12 border border-border/50">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Future?</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Join the cybersecurity revolution. Whether you're looking for training, 
+                security audits, or want to be part of our community.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="btn-primary px-8 py-3 rounded-lg font-medium hover-lift">
+                  Join Our Community
+                </button>
+                <button className="btn-secondary px-8 py-3 rounded-lg font-medium hover-lift">
+                  Work With Us
+                </button>
               </div>
             </div>
           </div>
@@ -150,18 +167,18 @@ const Index = () => {
               <div className="space-y-4">
                 <h4 className="text-sm font-semibold uppercase tracking-wider">Platform</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Competitions</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Training</a></li>
+                  <li><a href="/features" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
+                  <li><a href="/features" className="text-muted-foreground hover:text-primary transition-colors">Competitions</a></li>
+                  <li><a href="/features" className="text-muted-foreground hover:text-primary transition-colors">Training</a></li>
                 </ul>
               </div>
               
               <div className="space-y-4">
                 <h4 className="text-sm font-semibold uppercase tracking-wider">Company</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+                  <li><a href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
+                  <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                  <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
                 </ul>
               </div>
               

@@ -97,8 +97,8 @@ const Index = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">Advanced Security Challenges</h3>
-                    <p className="text-muted-foreground">State-of-the-art CTF challenges designed by industry experts to test and enhance your skills</p>
+                    <h3 className="text-xl font-semibold text-primary mb-2">CTF Challenges & Competitions</h3>
+                    <p className="text-muted-foreground">We create cutting-edge CTF challenges and host cybersecurity competitions for the global community</p>
                   </div>
                 </div>
               </div>
@@ -113,8 +113,8 @@ const Index = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">Global Cybersecurity Community</h3>
-                    <p className="text-muted-foreground">Connect with like-minded professionals and enthusiasts from around the world</p>
+                    <h3 className="text-xl font-semibold text-primary mb-2">Penetration Testing & Security</h3>
+                    <p className="text-muted-foreground">Professional web application penetesting services and comprehensive security assessments for businesses</p>
                   </div>
                 </div>
               </div>
@@ -129,8 +129,8 @@ const Index = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">Real-time Competition Platform</h3>
-                    <p className="text-muted-foreground">Participate in live events with instant feedback and dynamic leaderboards</p>
+                    <h3 className="text-xl font-semibold text-primary mb-2">Research Lab & Innovation</h3>
+                    <p className="text-muted-foreground">Advanced research in AI, Cloud, Automation, and cutting-edge tech. We're the VIP of cybersecurity - delivering enterprise solutions with AI and talented engineers</p>
                   </div>
                 </div>
               </div>

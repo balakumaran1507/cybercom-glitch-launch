@@ -1,10 +1,10 @@
-import { Linkedin, Twitter, Github, MessageSquare } from 'lucide-react';
+import { Linkedin, Instagram, Github, Mail } from 'lucide-react';
 
 const SocialLinks = () => {
   return (
     <div className="flex justify-center space-x-6">
       <a 
-        href="https://linkedin.com" 
+        href="https://www.linkedin.com/company/cybercom-chennai/" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-blue-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
@@ -15,18 +15,18 @@ const SocialLinks = () => {
         </div>
       </a>
       <a 
-        href="https://twitter.com" 
+        href="https://instagram.com" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-blue-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
-        aria-label="Twitter"
+        className="text-muted-foreground hover:text-pink-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
+        aria-label="Instagram"
       >
-        <div className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-glass-border flex items-center justify-center hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 shadow-lg shadow-black/20">
-          <Twitter size={22} />
+        <div className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-glass-border flex items-center justify-center hover:border-pink-500/50 hover:bg-pink-500/10 transition-all duration-300 shadow-lg shadow-black/20">
+          <Instagram size={22} />
         </div>
       </a>
       <a 
-        href="https://github.com" 
+        href="https://github.com/Cybercom-HQ" 
         target="_blank" 
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-purple-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
@@ -37,14 +37,14 @@ const SocialLinks = () => {
         </div>
       </a>
       <a 
-        href="https://discord.com" 
+        href="mailto:founders@cybercom.live" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-cyan-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
-        aria-label="Discord"
+        className="text-muted-foreground hover:text-green-400 transition-all transform hover:scale-110 hover:-translate-y-1 duration-300"
+        aria-label="Email"
       >
-        <div className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-glass-border flex items-center justify-center hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300 shadow-lg shadow-black/20">
-          <MessageSquare size={22} />
+        <div className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-glass-border flex items-center justify-center hover:border-green-500/50 hover:bg-green-500/10 transition-all duration-300 shadow-lg shadow-black/20">
+          <Mail size={22} />
         </div>
       </a>
     </div>

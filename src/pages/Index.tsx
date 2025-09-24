@@ -1,6 +1,6 @@
 import CountdownTimer from '@/components/CountdownTimer';
 import SocialLinks from '@/components/SocialLinks';
-import EmailSubscription from '@/components/EmailSubscription';
+import CTFRegistration from '@/components/EmailSubscription';
 
 const Index = () => {
   return (
@@ -29,9 +29,9 @@ const Index = () => {
                   </p>
                 </div>
                 
-                {/* Email Subscription */}
+                {/* CTF Registration */}
                 <div className="glass-card rounded-xl p-8 hover-lift border border-glass-border backdrop-blur-xl">
-                  <EmailSubscription />
+                  <CTFRegistration />
                 </div>
                 
                 {/* Social Links */}
@@ -58,99 +58,18 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Features Section with Improved Cards */}
-        <section className="w-full px-6 md:px-12 py-16 md:py-24 bg-gradient-to-b from-black/40 to-black/80 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto space-y-12">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Why Choose Cybercom</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Our platform offers unique advantages for cybersecurity professionals and enthusiasts</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-              {/* Feature 1 */}
-              <div className="glass-card rounded-xl p-8 hover-lift border border-glass-border h-full relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10 space-y-6">
-                  <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">CTF Challenges & Competitions</h3>
-                    <p className="text-muted-foreground">We create cutting-edge CTF challenges and host cybersecurity competitions for the global community</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Feature 2 */}
-              <div className="glass-card rounded-xl p-8 hover-lift border border-glass-border h-full relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10 space-y-6">
-                  <div className="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">Penetration Testing & Security</h3>
-                    <p className="text-muted-foreground">Professional web application penetesting services and comprehensive security assessments for businesses</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Feature 3 */}
-              <div className="glass-card rounded-xl p-8 hover-lift border border-glass-border h-full relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10 space-y-6">
-                  <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">Research Lab & Innovation</h3>
-                    <p className="text-muted-foreground">Advanced research in AI, Cloud, Automation, and cutting-edge tech. We deliver enterprise solutions with AI and talented engineers - we're the game changers of cybersecurity</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Partner Companies */}
+        {/* Sponsors and Partners */}
         <section className="w-full px-6 md:px-12 py-16 bg-muted/20">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-8">Trusted by Industry Leaders</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="glass-morphism rounded-lg p-4 border border-border/30 hover-lift">
-                  <div className="w-full h-12 bg-muted rounded flex items-center justify-center">
-                    <span className="text-xs text-muted-foreground">Partner {index + 1}</span>
+            <h2 className="text-2xl font-bold mb-8">Sponsors and Partners</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-60">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className="glass-morphism rounded-lg p-6 border border-border/30 hover-lift">
+                  <div className="w-full h-16 bg-muted rounded flex items-center justify-center">
+                    <span className="text-sm text-muted-foreground">Partner {index + 1}</span>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="w-full px-6 md:px-12 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="glass-morphism rounded-2xl p-12 border border-border/50">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Future?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Join the cybersecurity revolution. Whether you're looking for training, 
-                security audits, or want to be part of our community.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary px-8 py-3 rounded-lg font-medium hover-lift">
-                  Join Our Community
-                </button>
-                <button className="btn-secondary px-8 py-3 rounded-lg font-medium hover-lift">
-                  Work With Us
-                </button>
-              </div>
             </div>
           </div>
         </section>

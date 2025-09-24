@@ -9,8 +9,6 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Features', path: '/features' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -38,7 +36,11 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="btn-primary">
+            <Button 
+              size="sm" 
+              className="btn-primary"
+              onClick={() => window.open('http://ctf.cybercom.live/', '_blank')}
+            >
               Join Us
             </Button>
           </div>
@@ -69,7 +71,11 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button size="sm" className="btn-primary w-fit">
+              <Button 
+                size="sm" 
+                className="btn-primary w-fit"
+                onClick={() => window.open('http://ctf.cybercom.live/', '_blank')}
+              >
                 Join Us
               </Button>
             </div>

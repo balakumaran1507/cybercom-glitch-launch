@@ -20,12 +20,13 @@ const Index = () => {
               <div className="space-y-10">
                 <div className="space-y-6">
                   <h2 className="text-5xl md:text-7xl font-extrabold leading-tight">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-white">Redefining</span>
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-white">Cybercom</span>
                     <br />
-                    <span>Cybersecurity</span>
+                    <span>A Global CTF Summit</span>
                   </h2>
                   <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                    The next generation of CTF challenges and competitions is coming. Be ready.
+                    CTFs will Never be the Same again.<br />
+                    Are you Ready ?
                   </p>
                 </div>
                 
